@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, type ReactElement } from "react";
 
 type SearchType = "Hotels" | "Flights" | "Tours" | "Cars";
 
@@ -13,7 +13,7 @@ const DEMO_RESULTS: Record<SearchType, number> = {
   Cars: 31,
 };
 
-const TYPE_ICONS: Record<SearchType, JSX.Element> = {
+const TYPE_ICONS: Record<SearchType, ReactElement> = {
   Hotels: (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="2" y="3" width="20" height="20" rx="1" />
