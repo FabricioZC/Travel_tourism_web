@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+const easeOut: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
 export default function HotspotSection() {
   return (
     <section className="relative bg-white px-4 sm:px-8 md:px-12 xl:px-20 py-20 max-sm:py-10 overflow-hidden">
@@ -58,7 +60,7 @@ export default function HotspotSection() {
           initial={{ opacity: 0, y: 50, rotate: -3 }}
           whileInView={{ opacity: 1, y: 0, rotate: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, ease: easeOut }}
           className="w-full max-w-md flex flex-col gap-4"
         >
           <div className="relative rounded-3xl overflow-hidden h-[460px] max-sm:h-72 shadow-xl">

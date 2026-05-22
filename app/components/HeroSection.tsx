@@ -20,14 +20,16 @@ const containerVariants = {
   },
 };
 
+const easeOut: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: easeOut } },
 };
 
 const tagVariants = {
   hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: easeOut } },
 };
 
 export default function HeroSection() {
