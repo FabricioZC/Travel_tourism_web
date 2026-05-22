@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chromium-cli --session ticotrip-hero)",
+      "Bash(npx playwright *)",
+      "Bash(node -e \"require\\('playwright'\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(curl -sf http://localhost:3000)",
+      "Bash(curl -sf \"http://localhost:3000/_next/static/css/\")",
+      "Bash(npm run *)",
+      "PowerShell(taskkill /PID 14592 /F)"
+    ]
+  }
+}
